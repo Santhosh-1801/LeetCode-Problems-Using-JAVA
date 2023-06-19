@@ -27,28 +27,6 @@ class Solution {
                 s1.pop();
             }
         }
-        else if(str1==']' ) 
-        {
-            if(s1.isEmpty() || s1.peek()!='[')
-            {
-                counter=counter+1;
-            }
-            else 
-            {
-                s1.pop();
-            }
-        }
-        else if(str1=='}' )
-        {
-            if(s1.isEmpty() || s1.peek()!='{')
-            {
-                counter=counter-1;
-            }
-            else 
-            {
-                s1.pop();
-            }
-        }
      }
     return counter+s1.size();
     
