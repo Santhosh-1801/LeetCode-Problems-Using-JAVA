@@ -2,208 +2,166 @@ package com.company;// Press Shift twice to open the Search Everywhere dialog an
 // then press Enter. You can now see whitespace characters in your code.
 
 import java.lang.*;
-
- class GroceryMart {
-    private String CustomerName;
-    private String Cid;
-    private String phoneNumber;
-    private double accountBalance;
-
-    private String customerAddress;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Scanner;
 
 
-    GroceryMart(){
-        this("Venu Kishan","123","9879012345",12300,"Jai nagar");
-
+class shoppingCart{
+    private int a[];
+    public ArrayList<String> shoppingCart1=new ArrayList<>();
+    shoppingCart(int size){
+        a=new int[size];
     }
-    GroceryMart(String customerName,String Cid,String phoneNumber,double accountBalance,String customerAddress){
-        this.CustomerName=customerName;
-        this.Cid=Cid;
-        this.phoneNumber=phoneNumber;
-        this.accountBalance=accountBalance;
-        this.customerAddress=customerAddress;
-        System.out.println("Paramaterized constructor called");
-
-
+    public int getSize(){
+        return shoppingCart1.size();
     }
-
-    /*public void setName(String Name){
-        this.CustomerName=Name;
+    public void addItem(String item){
+        shoppingCart1.add(item);
     }
-    public void setId(String ID){
-        this.Cid=ID;
+    public void printList(){
+        for(int i=0;i<shoppingCart1.size();i++)
+        {
+            System.out.println(shoppingCart1.get(i));
+        }
     }
-    public void setAccountBalance(double accountBalance){
-        this.accountBalance=accountBalance;
+    public void modifyItem(int position,String name){
+        shoppingCart1.set(position,name);
     }
-    public void setPhoneNumber(String phoneNumber){
-        this.phoneNumber=phoneNumber;
+    public void deleteItem(int position){
+        shoppingCart1.remove(position);
     }
-    public void setCustomerAddress(String CustomerAddress){
-        this.customerAddress=CustomerAddress;
-    }*/
-     public String getName(){
-         return this.CustomerName;
-     }
-     public String getId() {
-         return this.Cid;
-     }
-     public String getPhoneNumber(){
-         return this.phoneNumber;
-     }
-     public String getCustomerAddress(){
-         return this.customerAddress;
-     }
-     public double getBalanceAmount(){
-         return this.accountBalance;
-     }
-     public void Shop(double amount){
-        if(accountBalance>amount){
-            double remainingAmount=accountBalance-amount;
-            System.out.println("Shopping done "+" and your balance amount is"+remainingAmount);
-            accountBalance=remainingAmount;
+    public String searchItem(String SearchItem){
+        int position=shoppingCart1.indexOf(SearchItem);
+        if(position>=0)
+        {
+            return shoppingCart1.get(position);
         }
         else {
-            System.out.println("Insufficient shopping");
+            return null;
         }
-     }
-     public void addAmount(double amount){
-        accountBalance=accountBalance+amount;
-        System.out.println("Amount deposited "+accountBalance);
-     }
-
- }
-
-
- class Building {
-     private String color;
-     Building(String color){
-         this.color=color;
-     }
-     public String getColor(){
-         return this.color;
-     }
-     public void setColor(String color){
-         this.color=color;
-     }
- }
-
-
- class A {
-     private int light=10;
-     private int sound=20;
-
-     public void getSome(){
-         System.out.println("Something");
-     }
-     A(){
-         System.out.println("Ask");
-     }
-
- }
- class B extends A{
-
-     B(){
-         super();
-     }
-     public void getSome(){
-         super.getSome();
-         System.out.println("Something Below");
-     }
-     static void getRace(){
-         System.out.println("Racer B");
-     }
-     static void getRace(int a,int b){
-         a=1;
-         b=2;
-         System.out.println("Racer B overloaded 1");
-
-     }
-     static void getRace(int a,int b,int c){
-         a=1;
-         b=2;
-         c=3;
-         System.out.println("Racer B overloaded 2");
-     }
-
- }
-
-
-
- class C {
-     public void makesime(int a,int b){
-         System.out.println("Make sime");
-     }
- }
-class D {
-     public void makesime(){
-         System.out.println("Make sime 2");
-     }
-     public static void display(){
-         System.out.println("Display something");
-     }
+    }
 }
 
-
-class Cricket{
-     public String formatName;
-
-     Cricket(String formatName){
-         this.formatName=formatName;
-     }
-     public String rule(){
-         return "Cricket is an outdoor sport between two users of 11 players each";
-     }
-
+class Dateitem{
+    String date;
+    Dateitem(String Date){
+        this.date=Date;
+    }
 }
-class TestMatch extends Cricket{
+class sortItems implements Comparator<Dateitem>{
+    public int compare(Dateitem a,Dateitem b){
+        return a.date.compareTo(b.date);
+    }
+}
 
-     TestMatch(String formatName){
-         super(formatName);
-     }
-     public String rule(){
-         return "PLayed for 5 days";
-     }
-}
-class oneDay extends Cricket{
-     oneDay(String formatName){
-         super(formatName);
-     }
-     public String rule(){
-         return "Played for one day";
-     }
-}
 
 
 public class Main {
     public static void main(String[] arg) {
-        Student student1=new Student("Santhosh","121");
-        Session FinalYear=new Session("2021",student1);
-        Floor thirdFloor=new Floor(5,10000);
-        Branch CSE=new Branch("Computer",FinalYear);
-        Library APJ=new Library("Best Library","2019",10000,thirdFloor);
-        College VIT=new College("Vit",APJ,CSE);
-        University VITvellore=new University("VIT",VIT);
-        VITvellore.getCollege().getOpeningDate();
-        for(int i=1;i<10;i++)
-        {
-            Cricket cricket=randomMatch();
-            System.out.println("Format Type "+i+" is "+cricket.rule());
+
+     printMenu();
+
+        boolean quit = false;
+        while(!quit) {
+            System.out.println("Choice: ");
+            int choice = scanner.nextInt();
+            scanner.nextLine();
+
+            switch(choice) {
+                case 1:
+                    printListOfContacts();
+                    break;
+                case 2:
+                    addContact();
+                    break;
+                case 3:
+                    updateContact();
+                    break;
+                case 4:
+                    removeContact();
+                    break;
+                case 5:
+                    searchContact();
+                    break;
+                case 6:
+                    quit = true;
+                    quit();
+                    break;
+                default:
+                    System.out.println("Invalid option");
+                    printMenu();
+            }
         }
 
+
     }
-    public static Cricket randomMatch(){
-       int randomNumber=(int)(Math.random()*5)+1;
-       System.out.println("random number is "+randomNumber);
-       switch (randomNumber){
-           case 1:
-               return  new TestMatch("Test");
-           case 2:
-               return  new oneDay("One day");
-           default:
-               return null;
-       }
+    private static Scanner scanner = new Scanner(System.in);
+    private static MobilePhone mobilePhone = new MobilePhone();
+    private static void quit(){
+        System.out.println("/*******QUIT**************");
+    }
+    private static void printMenu(){
+        System.out.println("Print:");
+        System.out.println("\t 1- Print list of contacts");
+        System.out.println("\t 2- Add new contact");
+        System.out.println("\t 3- Update existing contact");
+        System.out.println("\t 4- Remove contact");
+        System.out.println("\t 5- Search / find contact");
+        System.out.println("\t 6- Quit");
+    }
+    private static void printListOfContacts(){
+        mobilePhone.printListofContacts();
+
+    }
+    private static void addContact(){
+        System.out.println("Enter your name");
+        String s1= scanner.nextLine();
+        System.out.println("Enter your phone number");
+        int n1=scanner.nextInt();
+
+        scanner.nextLine();
+
+        mobilePhone.addContacts(new Contact(s1,n1));
+
+    }
+    private static void updateContact(){
+
+        System.out.println("Enter contact you want to update");
+        String name=scanner.nextLine();
+
+        System.out.println("Enter contact new name");
+        String newName=scanner.nextLine();
+        System.out.println("Enter contact new number");
+        int newPhoneNumber=scanner.nextInt();
+        scanner.nextLine();
+
+        Contact newContact=new Contact(newName,newPhoneNumber);
+        mobilePhone.updateContact(name,newContact);
 
 
     }
+    private static void removeContact(){
+
+        System.out.println("Enter contact you want to remove: ");
+        String name = scanner.nextLine();
+
+        mobilePhone.removeContact(name);
+
+    }
+    private static void searchContact(){
+        System.out.println("Enter contact name: ");
+        String name = scanner.nextLine();
+
+        int contactPosition = mobilePhone.findContact(name);
+        if(contactPosition < 0) {
+            System.out.println("Contact not found");
+        }
+        System.out.println(name + ": " + mobilePhone.getContacts().get(contactPosition).getNumber());
+
+
+    }
+
 }
