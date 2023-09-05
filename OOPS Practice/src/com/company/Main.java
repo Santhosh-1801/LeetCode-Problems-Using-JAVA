@@ -58,12 +58,43 @@ class sortItems implements Comparator<Dateitem>{
 
 
 public class Main {
-    public static void main(String[] arg) {
+    public static void main(String[] args)
+
+    {
+        ArrayList<Movie> pd=new ArrayList<>();
+        pd.add(new Movie(8.8,"Godzilla",2011));
+        pd.add(new Movie(8.4,"Spiderman",2002));
+        pd.add(new Movie(6.0,"Inception",2001));
+        pd.add(new Movie(8.1,"Da Vinci Code",2023));
+        pd.add(new Movie(5.2,"Martians",2022));
+        pd.add(new Movie(9.7,"Cobra",2014));
+        pd.add(new Movie(2.0,"Infernus",2018));
+        pd.add(new Movie(1.3,"Magnimous",1992));
+
+        System.out.println("Sorting out based on rating");
+        RatingCompare rc=new RatingCompare();
+        Collections.sort(pd,rc);
+        for(Movie m:pd){
+            System.out.println(m.getRating()+" "+m.getYear()+" "+m.getName());
+        }
+        System.out.println("**************************");
+        NameCompare nc=new NameCompare();
+        Collections.sort(pd,nc);
+
+        for(Movie m:pd){
+            System.out.println(m.getRating()+" "+m.getYear()+" "+m.getName());
+        }
+        System.out.println("**************************");
+        YearCompare yc=new YearCompare();
+        Collections.sort(pd,yc);
+
+        for(Movie m:pd){
+            System.out.println(m.getRating()+" "+m.getYear()+" "+m.getName());
+        }
+        System.out.println("**************************");
+
+
 
     }
-    public static void AddElement(LinkedList<String>b,String word){
-        b.add(word);
-    }
-
-    }
+}
 
