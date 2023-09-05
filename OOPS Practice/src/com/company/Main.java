@@ -59,8 +59,8 @@ class sortItems implements Comparator<Dateitem>{
 
 public class Main {
     public static void main(String[] args)
-
     {
+        
         ArrayList<Movie> pd=new ArrayList<>();
         pd.add(new Movie(8.8,"Godzilla",2011));
         pd.add(new Movie(8.4,"Spiderman",2002));
@@ -70,7 +70,6 @@ public class Main {
         pd.add(new Movie(9.7,"Cobra",2014));
         pd.add(new Movie(2.0,"Infernus",2018));
         pd.add(new Movie(1.3,"Magnimous",1992));
-
         System.out.println("Sorting out based on rating");
         RatingCompare rc=new RatingCompare();
         Collections.sort(pd,rc);
@@ -92,6 +91,18 @@ public class Main {
             System.out.println(m.getRating()+" "+m.getYear()+" "+m.getName());
         }
         System.out.println("**************************");
+
+        Map<String,String> prepinsta=new HashMap<>();
+        prepinsta.put("Atulya","Cofounder");
+        prepinsta.put("Vaibhav","Founder");
+        prepinsta.put("Ashlety","Managing Director");
+        prepinsta.put("Shivam Dubey","CP");
+        System.out.println(prepinsta.keySet());
+        for(String s:prepinsta.keySet()){
+            System.out.println("The key is "+s+" and value is "+prepinsta.get(s));
+        }
+
+
 
 
 
