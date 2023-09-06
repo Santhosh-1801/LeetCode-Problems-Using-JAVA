@@ -58,9 +58,9 @@ class sortItems implements Comparator<Dateitem>{
 
 
 public class Main {
+
     public static void main(String[] args)
     {
-        
         ArrayList<Movie> pd=new ArrayList<>();
         pd.add(new Movie(8.8,"Godzilla",2011));
         pd.add(new Movie(8.4,"Spiderman",2002));
@@ -101,7 +101,35 @@ public class Main {
         for(String s:prepinsta.keySet()){
             System.out.println("The key is "+s+" and value is "+prepinsta.get(s));
         }
+        Set<String> value=new HashSet<>();
+        value.add("I am");
+        value.add("studying");
+        value.add("data science");
+        value.add("in this era");
+        System.out.println(value);
+        value.add("I am");
+        System.out.println(value);
 
+
+        Set<Integer> value1= new HashSet<>();
+        value1.addAll(Arrays.asList(new Integer[]{1,2,3,4,5,6,7,8,9}));
+        System.out.println(value1);
+        Set<Integer> value2= new HashSet<>();
+        value2.addAll(Arrays.asList(new Integer[]{1,2,3,4,5,6,7}));
+        Set<Integer> intersectionSet=new HashSet<>();
+        Set<Integer> intersection=new HashSet<>(value1);
+        intersection.retainAll(value2);
+        System.out.println(intersection);
+
+
+
+        Studentdetails s1=new Studentdetails("Santhosh","1");
+        Studentdetails s2=new Studentdetails("Arjun","2");
+        Studentdetails s3=new Studentdetails("Santhosh","1");
+        Studentdetails s4=s1;
+        System.out.println(s4);
+        System.out.println(s1);
+        System.out.println(s3);
 
 
 
