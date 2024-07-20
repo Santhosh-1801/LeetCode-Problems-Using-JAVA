@@ -14,4 +14,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0414-third-maximum-number](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/0414-third-maximum-number) |
+## String
+|  |
+| ------- |
+| [2346-largest-3-same-digit-number-in-string](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/2346-largest-3-same-digit-number-in-string) |
 <!---LeetCode Topics End-->
