@@ -6,4 +6,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0728-self-dividing-numbers](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/0728-self-dividing-numbers) |
 | [3371-harshad-number](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/3371-harshad-number) |
+## Array
+|  |
+| ------- |
+| [0414-third-maximum-number](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/0414-third-maximum-number) |
+## Sorting
+|  |
+| ------- |
+| [0414-third-maximum-number](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/0414-third-maximum-number) |
 <!---LeetCode Topics End-->
