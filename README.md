@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## String
 |  |
 | ------- |
+| [0345-reverse-vowels-of-a-string](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/0345-reverse-vowels-of-a-string) |
 | [2231-find-first-palindromic-string-in-the-array](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/2231-find-first-palindromic-string-in-the-array) |
 | [2346-largest-3-same-digit-number-in-string](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/2346-largest-3-same-digit-number-in-string) |
 | [2502-sort-the-people](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/2502-sort-the-people) |
@@ -47,6 +48,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0088-merge-sorted-array](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/0088-merge-sorted-array) |
+| [0345-reverse-vowels-of-a-string](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/0345-reverse-vowels-of-a-string) |
 | [1019-squares-of-a-sorted-array](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/1019-squares-of-a-sorted-array) |
 | [2231-find-first-palindromic-string-in-the-array](https://github.com/Santhosh-1801/LeetCode-Problems-Using-JAVA/tree/master/2231-find-first-palindromic-string-in-the-array) |
 <!---LeetCode Topics End-->
